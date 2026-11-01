@@ -1,6 +1,6 @@
 # Ocaum MCP
 
-Busque imóvel à venda em São Paulo conversando com o Claude ou o ChatGPT. Uma pergunta, os 3 maiores portais, links já conferidos.
+Busque imóvel à venda em São Paulo conversando com a sua IA, em qualquer cliente que fale MCP (Claude, ChatGPT, Cursor, VS Code, Codex e outros). Uma pergunta, os 3 maiores portais, links já conferidos.
 
 <!-- TODO: vídeo/GIF de ~15 s: pergunta → resultado (docs/demo.gif) -->
 
@@ -16,6 +16,8 @@ Busque imóvel à venda em São Paulo conversando com o Claude ou o ChatGPT. Uma
 | Mesmo imóvel repetido em vários portais | Resultado único, com o link de cada anúncio |
 
 ## Conectar (2 minutos)
+
+O Ocaum é um servidor [MCP](https://modelcontextprotocol.io) remoto, então vale em qualquer cliente que aceite MCP por URL com login OAuth.
 
 URL do servidor: `https://mcp.ocaum.com/mcp`
 
@@ -33,6 +35,19 @@ URL do servidor: `https://mcp.ocaum.com/mcp`
 claude mcp add --transport http ocaum https://mcp.ocaum.com/mcp
 ```
 Depois rode `/mcp` e escolha **Authenticate**.
+
+**Outro cliente MCP** (Cursor, VS Code, Windsurf, Gemini CLI, Codex…)
+
+Adicione um servidor MCP remoto (HTTP) com a URL acima e faça o login quando o cliente pedir. Onde fica esse menu muda de cliente pra cliente: veja a documentação dele.
+
+| Cliente | Status |
+|---|---|
+| Claude (claude.ai e Desktop) | testado |
+| Claude Code | testado |
+| ChatGPT (modo desenvolvedor) | em teste |
+| Cursor, VS Code, Windsurf, Gemini CLI, Codex | ainda não testado, deve funcionar |
+
+Funcionou ou não funcionou no seu? Conte numa [issue](../../issues).
 
 ## Teste rápido
 
@@ -71,6 +86,7 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 
 - **Não chegou o código:** olhe o spam e as promoções, depois peça outro. O e-mail sai de `access@workos-mail.com`.
 - **Erro 401 depois do login:** remova o conector e adicione de novo.
+- **Cliente sem suporte a login OAuth não conecta.** Use um dos clientes da tabela acima.
 - **O assistente não usa a ferramenta:** peça "use o Ocaum para buscar…".
 
 ## Privacidade
