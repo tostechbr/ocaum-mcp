@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.svg" width="128" height="128" alt="Ocaum"></p>
+
 <h1 align="center">Ocaum</h1>
 
 <p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>Pergunte à sua IA e receba anúncios de venda em São Paulo dos 3 maiores portais, com o link já conferido.</p>
@@ -100,6 +102,6 @@ Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr)), engen
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
 
-## Versão
+## Mais
 
-Veja o [CHANGELOG](CHANGELOG.md).
+[Changelog](CHANGELOG.md) · [Como contribuir](CONTRIBUTING.md) · [Segurança e privacidade](SECURITY.md)

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Ocaum: uma casa em forma de balão de conversa">
+  <rect width="256" height="256" rx="56" fill="#0B5D4B"/>
+  <path d="M128 56 L204 114 V172 Q204 184 192 184 H134 L102 212 V184 H64 Q52 184 52 172 V114 Z"
+        fill="#FFFFFF" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="104" cy="138" r="9" fill="#0B5D4B"/>
+  <circle cx="128" cy="138" r="9" fill="#0B5D4B"/>
+  <circle cx="152" cy="138" r="9" fill="#0B5D4B"/>
+</svg>
