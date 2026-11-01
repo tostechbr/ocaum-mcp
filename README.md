@@ -11,7 +11,11 @@
   <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
 </p>
 
-<!-- TODO: vídeo/GIF de ~15 s no topo: pergunta → resultado (docs/demo.gif) -->
+<p align="center">
+  <img src="docs/demo.gif" width="720" alt="Uma pergunta no chat vira 3 anúncios reais de Moema, com preço e selo 🟢🟡🔴">
+  <br>
+  <sub>Busca real feita no Ocaum, com a base de 08/10: 566 imóveis, 3 portais, selo de preço em cada um.</sub>
+</p>
 
 Funciona no **Claude, ChatGPT, Cursor, VS Code, Codex** e em qualquer cliente que fale [MCP](https://modelcontextprotocol.io), o padrão aberto das IAs. Você conecta uma URL, faz login e pergunta.
 
