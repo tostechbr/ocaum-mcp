@@ -2,7 +2,7 @@
 
 <h1 align="center">Ocaum</h1>
 
-<p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>Pergunte à sua IA e receba anúncios de venda em São Paulo dos 4 maiores portais, com o link já conferido.</p>
+<p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>A busca de imóveis dos portais, dentro da sua IA.</p>
 
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
