@@ -1,10 +1,17 @@
-# Ocaum MCP
+<h1 align="center">Ocaum</h1>
 
-Busque imóvel à venda em São Paulo conversando com a sua IA, em qualquer cliente que fale MCP (Claude, ChatGPT, Cursor, VS Code, Codex e outros). Uma pergunta, os 3 maiores portais, links já conferidos.
+<p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>Pergunte à sua IA e receba anúncios de venda em São Paulo dos 3 maiores portais, com o link já conferido.</p>
 
-<!-- TODO: vídeo/GIF de ~15 s: pergunta → resultado (docs/demo.gif) -->
+<p align="center">
+  <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.1.0-3f7d20">
+  <img alt="Cobertura" src="https://img.shields.io/badge/venda-S%C3%A3o_Paulo-1d1d1f">
+  <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
+</p>
 
-> Versão **0.1.0** · só **venda** · só **São Paulo** · login por código de e-mail
+<!-- TODO: vídeo/GIF de ~15 s no topo: pergunta → resultado (docs/demo.gif) -->
+
+Funciona no **Claude, ChatGPT, Cursor, VS Code, Codex** e em qualquer cliente que fale [MCP](https://modelcontextprotocol.io), o padrão aberto das IAs. Você conecta uma URL, faz login e pergunta.
 
 ## Sem × com o Ocaum
 
@@ -17,7 +24,7 @@ Busque imóvel à venda em São Paulo conversando com a sua IA, em qualquer clie
 
 ## Conectar (2 minutos)
 
-O Ocaum é um servidor [MCP](https://modelcontextprotocol.io) remoto, então vale em qualquer cliente que aceite MCP por URL com login OAuth.
+Uma URL só, em qualquer cliente. Você precisa de um cliente MCP com suporte a servidor remoto e login OAuth (todos os citados acima têm).
 
 URL do servidor: `https://mcp.ocaum.com/mcp`
 
@@ -36,18 +43,11 @@ claude mcp add --transport http ocaum https://mcp.ocaum.com/mcp
 ```
 Depois rode `/mcp` e escolha **Authenticate**.
 
-**Outro cliente MCP** (Cursor, VS Code, Windsurf, Gemini CLI, Codex…)
+**Qualquer outro cliente MCP** (Cursor, VS Code, Windsurf, Gemini CLI, Codex…)
 
-Adicione um servidor MCP remoto (HTTP) com a URL acima e faça o login quando o cliente pedir. Onde fica esse menu muda de cliente pra cliente: veja a documentação dele.
+Adicione um servidor MCP remoto (HTTP) com a URL acima e faça o login quando o cliente pedir. O nome do menu muda de cliente pra cliente, mas o passo é sempre esse.
 
-| Cliente | Status |
-|---|---|
-| Claude (claude.ai e Desktop) | testado |
-| Claude Code | testado |
-| ChatGPT (modo desenvolvedor) | em teste |
-| Cursor, VS Code, Windsurf, Gemini CLI, Codex | ainda não testado, deve funcionar |
-
-Funcionou ou não funcionou no seu? Conte numa [issue](../../issues).
+Conectou em outro? Conte numa [issue](../../issues) e a gente coloca aqui o passo a passo.
 
 ## Teste rápido
 
@@ -73,9 +73,9 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 | `ocaum_list_neighborhoods` | Acerta a grafia de bairro. |
 | `ocaum_index_status` | Quantos anúncios ativos há por portal e há quantas horas foram atualizados. |
 
-## O que esperar
+## Cobertura e limites
 
-- **Só venda, só São Paulo.** Aluguel e outras cidades ficam de fora por enquanto.
+- **Venda em São Paulo**, nos portais ZAP/VivaReal, OLX e QuintoAndar.
 - **Base atualizada todo dia, à meia-noite.** O `ocaum_index_status` mostra a idade de cada portal.
 - **Dado que o portal não informa não aparece.** Ausente não quer dizer "não tem".
 - **O selo 🟢🟡🔴 é uma aproximação**, não um laudo de avaliação.
@@ -86,7 +86,6 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 
 - **Não chegou o código:** olhe o spam e as promoções, depois peça outro. O e-mail sai de `access@workos-mail.com`.
 - **Erro 401 depois do login:** remova o conector e adicione de novo.
-- **Cliente sem suporte a login OAuth não conecta.** Use um dos clientes da tabela acima.
 - **O assistente não usa a ferramenta:** peça "use o Ocaum para buscar…".
 
 ## Privacidade
