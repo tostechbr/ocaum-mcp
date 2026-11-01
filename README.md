@@ -2,7 +2,7 @@
 
 <h1 align="center">Ocaum</h1>
 
-<p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>Pergunte à sua IA e receba anúncios de venda em São Paulo dos 3 maiores portais, com o link já conferido.</p>
+<p align="center"><b>Seu próximo imóvel, numa conversa.</b><br>Pergunte à sua IA e receba anúncios de venda em São Paulo dos 4 maiores portais, com o link já conferido.</p>
 
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
@@ -14,20 +14,20 @@
 <p align="center">
   <img src="docs/demo.gif" width="720" alt="Uma pergunta no chat vira 3 anúncios reais de Moema, com preço e selo 🟢🟡🔴">
   <br>
-  <sub>Busca real feita no Ocaum, com a base de 08/10: 566 imóveis, 3 portais, selo de preço em cada um.</sub>
+  <sub>Busca real feita no Ocaum, com a base de 08/10: 566 imóveis, 4 portais, selo de preço em cada um.</sub>
 </p>
 
 O Ocaum fala [MCP](https://modelcontextprotocol.io), o padrão aberto que Claude, ChatGPT, Cursor, VS Code e Codex adotam. Você conecta uma URL, faz login e pergunta.
 
 ## Por que o Ocaum
 
-Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 3 maiores portais de São Paulo.
+Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 4 maiores portais de São Paulo.
 
 ## Sem × com o Ocaum
 
 | ❌ Sem | ✅ Com |
 |---|---|
-| Abrir ZAP, VivaReal, OLX e QuintoAndar um por um | Uma pergunta busca nos 3 de uma vez |
+| Abrir ZAP, VivaReal, OLX e QuintoAndar um por um | Uma pergunta busca nos 4 de uma vez |
 | Anúncio que já saiu do ar, descoberto só ao clicar | O Ocaum abre cada link antes de responder e descarta o que sumiu |
 | "Esse preço está bom?" sem referência | 🟢 abaixo · 🟡 dentro · 🔴 acima do mercado, comparado a imóveis parecidos do bairro |
 | Mesmo imóvel repetido em vários portais | Resultado único, com o link de cada anúncio |
@@ -78,7 +78,7 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 
 | Ferramenta | O que faz |
 |---|---|
-| `ocaum_search_properties` | Busca venda nos 3 portais: preço, quartos, vagas, área, condomínio, pet, mobiliado, comodidades e preferências em texto ("perto do metrô"). Ordena por relevância, preço ou R$/m². |
+| `ocaum_search_properties` | Busca venda nos 4 portais (ZAP, VivaReal, OLX e QuintoAndar): preço, quartos, vagas, área, condomínio, pet, mobiliado, comodidades e preferências em texto ("perto do metrô"). Ordena por relevância, preço ou R$/m². |
 | `ocaum_evaluate_listing` | Recebe o link de um anúncio e diz se está caro (🟢🟡🔴), com os 5 parecidos do bairro. |
 | `ocaum_list_neighborhoods` | Acerta a grafia de bairro. |
 | `ocaum_index_status` | Quantos anúncios ativos há por portal e há quantas horas foram atualizados. |
