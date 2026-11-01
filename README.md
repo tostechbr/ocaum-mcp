@@ -19,6 +19,10 @@
 
 Funciona no **Claude, ChatGPT, Cursor, VS Code, Codex** e em qualquer cliente que fale [MCP](https://modelcontextprotocol.io), o padrão aberto das IAs. Você conecta uma URL, faz login e pergunta.
 
+## Por que o Ocaum
+
+Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 3 maiores portais de São Paulo.
+
 ## Sem × com o Ocaum
 
 | ❌ Sem | ✅ Com |
@@ -101,8 +105,6 @@ O login é feito pela WorkOS. Guardamos suas buscas e o seu identificador de usu
 ## Quem faz
 
 Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML, e **Bruno** ([@brudevel](https://github.com/brudevel)).
-
-Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 3 maiores portais de São Paulo.
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
 
