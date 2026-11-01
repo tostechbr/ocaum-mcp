@@ -11,5 +11,5 @@
 - Não vendemos nem compartilhamos esses dados.
 
 ## Como reportar uma falha de segurança
-Não abra issue pública. Fale direto com o Tiago Oliveira: <!-- TODO: e-mail ou LinkedIn de contato -->.
+Não abra issue pública. Fale direto com o Tiago Oliveira: [tiagosan.dev@gmail.com](mailto:tiagosan.dev@gmail.com) ou [LinkedIn](https://www.linkedin.com/in/tiagolivesan/).
 Diga o que você viu e como repetir. A gente responde e corrige antes de divulgar.

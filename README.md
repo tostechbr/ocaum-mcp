@@ -96,7 +96,7 @@ O login é feito pela WorkOS. Guardamos suas buscas e o seu identificador de usu
 
 ## Quem faz
 
-Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr)), engenheiro de AI/ML, e **Bruno** ([@brudevel](https://github.com/brudevel)).
+Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML, e **Bruno** ([@brudevel](https://github.com/brudevel)).
 
 <!-- TODO: 1-2 linhas sobre por que o Ocaum existe, e contato (LinkedIn/e-mail) -->
 
