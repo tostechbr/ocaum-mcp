@@ -17,7 +17,7 @@
   <sub>Busca real feita no Ocaum, com a base de 08/10: 566 imóveis, 3 portais, selo de preço em cada um.</sub>
 </p>
 
-Funciona no **Claude, ChatGPT, Cursor, VS Code, Codex** e em qualquer cliente que fale [MCP](https://modelcontextprotocol.io), o padrão aberto das IAs. Você conecta uma URL, faz login e pergunta.
+O Ocaum fala [MCP](https://modelcontextprotocol.io), o padrão aberto que Claude, ChatGPT, Cursor, VS Code e Codex adotam. Você conecta uma URL, faz login e pergunta.
 
 ## Por que o Ocaum
 
@@ -34,7 +34,7 @@ Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com
 
 ## Conectar (2 minutos)
 
-Uma URL só, em qualquer cliente. Você precisa de um cliente MCP com suporte a servidor remoto e login OAuth (todos os citados acima têm).
+Uma URL só, em qualquer cliente MCP com suporte a servidor remoto e login OAuth.
 
 URL do servidor: `https://mcp.ocaum.com/mcp`
 
@@ -104,7 +104,7 @@ O login é feito pela WorkOS. Guardamos suas buscas e o seu identificador de usu
 
 ## Quem faz
 
-Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML, e **Bruno** ([@brudevel](https://github.com/brudevel)).
+Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML.
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
 
