@@ -102,7 +102,7 @@ O login é feito pela WorkOS. Guardamos suas buscas e o seu identificador de usu
 
 Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML, e **Bruno** ([@brudevel](https://github.com/brudevel)).
 
-<!-- TODO: 1-2 linhas sobre por que o Ocaum existe, e contato (LinkedIn/e-mail) -->
+Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 3 maiores portais de São Paulo.
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
 
