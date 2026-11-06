@@ -7,21 +7,28 @@
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
   <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.1.0-3f7d20">
-  <img alt="Cobertura" src="https://img.shields.io/badge/venda-S%C3%A3o_Paulo-1d1d1f">
   <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
 </p>
 
+> [!TIP]
+> **Uma única busca consulta quatro portais de imóveis ao mesmo tempo.**
+>
+> - ZAP Imóveis
+> - Viva Real
+> - OLX
+> - QuintoAndar
+
 <p align="center">
-  <img src="docs/demo.gif" width="720" alt="Uma pergunta no chat vira 3 anúncios reais de Moema, com preço e selo 🟢🟡🔴">
+  <img src="docs/demo.gif" width="720" alt="Demonstração de uma busca de imóveis em Moema no chat do Ocaum">
   <br>
-  <sub>Busca real feita no Ocaum, com a base de 08/10: 566 imóveis, 4 portais, selo de preço em cada um.</sub>
+  <sub>Descreva a casa ou o apartamento que você procura, com detalhes como número de quartos, varanda e vaga, e indique se prefere ficar perto do metrô.</sub>
 </p>
 
-O Ocaum fala [MCP](https://modelcontextprotocol.io), o padrão aberto que Claude, ChatGPT, Cursor, VS Code e Codex adotam. Você conecta uma URL, faz login e pergunta.
+O Ocaum usa o [Model Context Protocol (MCP)](https://modelcontextprotocol.io) para levar a busca de imóveis ao seu assistente de IA. Veja a apresentação e os exemplos no [site do Ocaum](https://ocaum.com/).
 
 ## Por que o Ocaum
 
-Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados dos 4 maiores portais de São Paulo.
+Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com vaga, que aceite pet, e não esteja caro". O Ocaum deixa a sua IA responder isso direto, em linguagem natural, com dados de ZAP Imóveis, Viva Real, OLX e QuintoAndar.
 
 ## Sem × com o Ocaum
 
@@ -34,30 +41,85 @@ Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com
 
 ## Conectar (2 minutos)
 
-Uma URL só, em qualquer cliente MCP com suporte a servidor remoto e login OAuth.
+O Ocaum usa um servidor MCP remoto via HTTP com autenticação OAuth.
 
-URL do servidor: `https://mcp.ocaum.com/mcp`
+**URL do servidor** — `https://mcp.ocaum.com/mcp`
 
-**Claude (claude.ai ou Desktop)**
-1. Configurações → Conectores → **Adicionar conector personalizado**.
-2. Cole a URL acima e clique em **Conectar**.
-3. Faça o login: digite seu e-mail e o código de 6 dígitos que chega nele.
+Quando o Ocaum abrir a tela de login, informe seu e-mail e digite o código de seis dígitos que chegar na sua caixa de entrada.
 
-**ChatGPT** (modo desenvolvedor)
-1. Crie um conector novo com a mesma URL e autenticação **OAuth**.
-2. Faça o login com e-mail e código.
+| Assistente | Integração | Configuração |
+|---|---|---|
+| ChatGPT | Disponível | [Passo a passo](#chatgpt) |
+| Claude | Disponível | [Passo a passo](#claude) |
+| Cursor | Disponível | [Passo a passo](#cursor) |
+| Codex | Disponível | [Passo a passo](#codex) |
+| Claude Code | Disponível | [Passo a passo](#claude-code) |
+| Muse | Em breve | Guia em breve |
+| Grok | Em breve | Guia em breve |
 
-**Claude Code**
-```sh
-claude mcp add --transport http ocaum https://mcp.ocaum.com/mcp
-```
-Depois rode `/mcp` e escolha **Authenticate**.
+Os passos abaixo mostram como adicionar o servidor manualmente em clientes com suporte a MCP remoto e OAuth.
 
-**Qualquer outro cliente MCP** (Cursor, VS Code, Windsurf, Gemini CLI, Codex…)
+### ChatGPT
 
-Adicione um servidor MCP remoto (HTTP) com a URL acima e faça o login quando o cliente pedir. O nome do menu muda de cliente pra cliente, mas o passo é sempre esse.
+1. No ChatGPT pelo navegador, abra **Plugins**.
+2. Clique em **+** e escolha **Adicionar servidor MCP personalizado**.
+3. Use **Ocaum** como nome, cole a URL do servidor e selecione **OAuth**.
+4. Crie o plugin, instale-o e conclua o login quando solicitado.
+5. Em uma conversa, digite `@` e selecione o Ocaum antes de enviar a pergunta.
 
-Conectou em outro? Conte numa [issue](../../issues) e a gente coloca aqui o passo a passo.
+[Documentação do ChatGPT](https://developers.openai.com/api/docs/guides/custom-mcp-server)
+
+### Claude
+
+1. Abra **Personalizar → Conectores**.
+2. Clique em **+ Adicionar** e escolha a opção de conector personalizado.
+3. Informe **Ocaum** como nome, cole a URL do servidor e revise a autenticação detectada.
+4. Adicione o conector e conclua o login.
+5. Em uma conversa, abra **+ → Conectores** e ative o Ocaum.
+
+[Documentação do Claude](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp)
+
+### Cursor
+
+1. Abra `~/.cursor/mcp.json` para configurar o Ocaum em todos os projetos ou `.cursor/mcp.json` na pasta do projeto para configurá-lo apenas ali.
+2. Adicione a entrada `ocaum` em `mcpServers`. Preserve as outras entradas se o arquivo já existir.
+
+   ```json
+   {
+     "mcpServers": {
+       "ocaum": {
+         "url": "https://mcp.ocaum.com/mcp"
+       }
+     }
+   }
+   ```
+
+3. Salve o arquivo, abra a lista de servidores MCP no Cursor e conclua o login quando solicitado.
+4. Abra uma conversa com o Agent e peça para usar o Ocaum.
+
+[Documentação do Cursor](https://prod.cursor.com/help/customization/mcp)
+
+### Codex
+
+1. No terminal, adicione o servidor remoto.
+
+   ```sh
+   codex mcp add ocaum --url https://mcp.ocaum.com/mcp
+   ```
+
+2. Conclua o login no navegador. Se precisar iniciar o login manualmente, execute `codex mcp login ocaum`.
+3. Abra uma sessão do Codex e peça para usar o Ocaum.
+
+### Claude Code
+
+1. No terminal, adicione o servidor remoto.
+
+   ```sh
+   claude mcp add --transport http ocaum https://mcp.ocaum.com/mcp
+   ```
+
+2. Abra o Claude Code, execute `/mcp` e selecione **Authenticate** para o Ocaum.
+3. Conclua o login e peça para usar o Ocaum.
 
 ## Teste rápido
 
@@ -67,9 +129,12 @@ Cole no chat:
 
 O assistente chama `ocaum_search_properties` e responde com os anúncios e o link de cada um. Se funcionou, está pronto.
 
-## Perguntas que funcionam
+## Exemplos de perguntas
 
-- "Apartamento de 2 quartos com vaga na Vila Mariana até 900 mil, que aceite pet."
+- “Busque apartamentos com piscina e academia em Moema, até R$ 1,5 milhão.”
+- “Mostre imóveis de 3 quartos na Vila Mariana, perto do metrô.”
+- “Procure apartamentos com varanda que aceitem pets no Brooklin.”
+- “Compare imóveis de pelo menos 80 m² com duas vagas e condomínio até R$ 900 na Saúde.”
 - "Esse anúncio está caro? https://…" (cole o link do ZAP, VivaReal, OLX ou QuintoAndar)
 - "Quais bairros têm 'Pinheros'?" (acerta a grafia)
 - "Quando foi a última atualização da base?"
@@ -83,13 +148,47 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 | `ocaum_list_neighborhoods` | Acerta a grafia de bairro. |
 | `ocaum_index_status` | Quantos anúncios ativos há por portal e há quantas horas foram atualizados. |
 
-## Cobertura e limites
+## Cobertura
 
-- **Venda em São Paulo**, nos portais ZAP/VivaReal, OLX e QuintoAndar.
+As buscas são de imóveis à venda.
+
+| Região | Disponibilidade |
+|---|---|
+| Cidade de São Paulo | Disponível |
+| Estado de São Paulo | Em breve |
+| Acre | Em breve |
+| Alagoas | Em breve |
+| Amapá | Em breve |
+| Amazonas | Em breve |
+| Bahia | Em breve |
+| Ceará | Em breve |
+| Distrito Federal | Em breve |
+| Espírito Santo | Em breve |
+| Goiás | Em breve |
+| Maranhão | Em breve |
+| Mato Grosso | Em breve |
+| Mato Grosso do Sul | Em breve |
+| Minas Gerais | Em breve |
+| Pará | Em breve |
+| Paraíba | Em breve |
+| Paraná | Em breve |
+| Pernambuco | Em breve |
+| Piauí | Em breve |
+| Rio de Janeiro | Em breve |
+| Rio Grande do Norte | Em breve |
+| Rio Grande do Sul | Em breve |
+| Rondônia | Em breve |
+| Roraima | Em breve |
+| Santa Catarina | Em breve |
+| Sergipe | Em breve |
+| Tocantins | Em breve |
+
+### Limites de uso
+
 - **Base atualizada todo dia, à meia-noite.** O `ocaum_index_status` mostra a idade de cada portal.
 - **Dado que o portal não informa não aparece.** Ausente não quer dizer "não tem".
 - **O selo 🟢🟡🔴 é uma aproximação**, não um laudo de avaliação.
-- **Limite de uso:** 40 chamadas por minuto e 400 por hora, por pessoa. Busca de páginas fundas conta mais.
+- **Limite de uso:** 40 chamadas por minuto e 400 por hora, por pessoa.
 - **Servidor ocupado:** a resposta diz em quantos segundos tentar de novo.
 
 ## Problemas comuns
@@ -100,11 +199,13 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 
 ## Privacidade
 
-O login é feito pela WorkOS. Guardamos suas buscas e o seu identificador de usuário para melhorar o produto e aplicar o limite de uso.
+O Ocaum registra as buscas. Saiba como esses dados são tratados na [Política de Privacidade](https://ocaum.com/privacidade/).
 
-## Quem faz
+## Responsáveis
 
-Feito por **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML.
+**Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML
+
+**Bruno Oliveira** ([@brudevel](https://github.com/brudevel) · [LinkedIn](https://www.linkedin.com/in/brunoliveirasantos/)), Produto, AI
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
 
