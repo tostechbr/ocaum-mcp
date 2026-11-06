@@ -21,7 +21,7 @@
 <p align="center">
   <img src="docs/demo.gif" width="720" alt="Demonstração de uma busca de imóveis em Moema no chat do Ocaum">
   <br>
-  <sub>Descreva a casa ou o apartamento que você procura, com detalhes como número de quartos, varanda e vaga, e diga o que quer ter por perto, como escolas, metrô ou pontos de ônibus.</sub>
+  <sub>Descreva a casa ou o apartamento que você procura, com detalhes como número de quartos, varanda e vaga, e indique se prefere ficar perto do metrô.</sub>
 </p>
 
 O Ocaum usa o [Model Context Protocol (MCP)](https://modelcontextprotocol.io) para levar a busca de imóveis ao seu assistente de IA. Veja a apresentação e os exemplos no [site do Ocaum](https://ocaum.com/).
@@ -49,10 +49,11 @@ Quando o Ocaum abrir a tela de login, informe seu e-mail e digite o código de s
 
 | Assistente | Integração | Configuração |
 |---|---|---|
-| ChatGPT | Em breve | [Passo a passo](#chatgpt) |
-| Claude | Em breve | [Passo a passo](#claude) |
-| Cursor | Em breve | [Passo a passo](#cursor) |
-| Codex | Em breve | [Passo a passo](#codex) |
+| ChatGPT | Disponível | [Passo a passo](#chatgpt) |
+| Claude | Disponível | [Passo a passo](#claude) |
+| Cursor | Disponível | [Passo a passo](#cursor) |
+| Codex | Disponível | [Passo a passo](#codex) |
+| Claude Code | Disponível | [Passo a passo](#claude-code) |
 | Muse | Em breve | Guia em breve |
 | Grok | Em breve | Guia em breve |
 
@@ -131,7 +132,7 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 ## Exemplos de perguntas
 
 - “Busque apartamentos com piscina e academia em Moema, até R$ 1,5 milhão.”
-- “Mostre imóveis de 3 quartos na Vila Mariana, perto de escolas e do metrô.”
+- “Mostre imóveis de 3 quartos na Vila Mariana, perto do metrô.”
 - “Procure apartamentos com varanda que aceitem pets no Brooklin.”
 - “Compare imóveis de pelo menos 80 m² com duas vagas e condomínio até R$ 900 na Saúde.”
 - "Esse anúncio está caro? https://…" (cole o link do ZAP, VivaReal, OLX ou QuintoAndar)
@@ -196,11 +197,14 @@ As buscas são de imóveis à venda.
 - **Erro 401 depois do login:** remova o conector e adicione de novo.
 - **O assistente não usa a ferramenta:** peça "use o Ocaum para buscar…".
 
-##
+## Privacidade
 
-## Responsaveis
+O Ocaum registra as buscas. Saiba como esses dados são tratados na [Política de Privacidade](https://ocaum.com/privacidade/).
+
+## Responsáveis
 
 **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML
+
 **Bruno Oliveira** ([@brudevel](https://github.com/brudevel) · [LinkedIn](https://www.linkedin.com/in/brunoliveirasantos/)), Produto, AI
 
 Quer testar, dar feedback ou conversar sobre o projeto? Abra uma [issue](../../issues).
