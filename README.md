@@ -6,12 +6,12 @@
 
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.1.0-3f7d20">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.3-3f7d20">
   <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
 </p>
 
 > [!TIP]
-> **Uma única busca consulta quatro portais de imóveis ao mesmo tempo.**
+> **Uma única busca consulta o índice do Ocaum, com anúncios de quatro portais de imóveis, atualizado todo dia.**
 >
 > - ZAP Imóveis
 > - Viva Real
@@ -34,10 +34,10 @@ Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com
 
 | ❌ Sem | ✅ Com |
 |---|---|
-| Abrir ZAP, VivaReal, OLX e QuintoAndar um por um | Uma pergunta busca nos 4 de uma vez |
+| Abrir ZAP, VivaReal, OLX e QuintoAndar um por um | Uma pergunta busca no índice do Ocaum, com anúncios dos 4 |
 | Anúncio que já saiu do ar, descoberto só ao clicar | O Ocaum abre cada link antes de responder e descarta o que sumiu |
 | "Esse preço está bom?" sem referência | 🟢 abaixo · 🟡 dentro · 🔴 acima do mercado, comparado a imóveis parecidos do bairro |
-| Mesmo imóvel repetido em vários portais | Resultado único, com o link de cada anúncio |
+| Mesmo imóvel repetido em vários portais | Anúncios iguais (mesmo bairro, quartos, área e preço) viram um resultado só, com o link de um deles |
 
 ## Conectar (2 minutos)
 
@@ -143,7 +143,7 @@ O assistente chama `ocaum_search_properties` e responde com os anúncios e o lin
 
 | Ferramenta | O que faz |
 |---|---|
-| `ocaum_search_properties` | Busca venda nos 4 portais (ZAP, VivaReal, OLX e QuintoAndar): preço, quartos, vagas, área, condomínio, pet, mobiliado, comodidades e preferências em texto ("perto do metrô"). Ordena por relevância, preço ou R$/m². |
+| `ocaum_search_properties` | Busca imóveis à venda no índice do Ocaum (anúncios de ZAP, VivaReal, OLX e QuintoAndar): preço, quartos, vagas, área, condomínio, pet, mobiliado, comodidades e preferências em texto ("perto do metrô"). Ordena por relevância, preço ou R$/m². |
 | `ocaum_evaluate_listing` | Recebe o link de um anúncio e diz se está caro (🟢🟡🔴), com os 5 parecidos do bairro. |
 | `ocaum_list_neighborhoods` | Acerta a grafia de bairro. |
 | `ocaum_index_status` | Quantos anúncios ativos há por portal e há quantas horas foram atualizados. |
@@ -186,9 +186,10 @@ As buscas são de imóveis à venda.
 ### Limites de uso
 
 - **Base atualizada todo dia, à meia-noite.** O `ocaum_index_status` mostra a idade de cada portal.
+- **A busca é no índice, não ao vivo nos portais.** Um anúncio pode ter saído do ar desde a última coleta: confira no link original.
 - **Dado que o portal não informa não aparece.** Ausente não quer dizer "não tem".
 - **O selo 🟢🟡🔴 é uma aproximação**, não um laudo de avaliação.
-- **Limite de uso:** 40 chamadas por minuto e 400 por hora, por pessoa.
+- **Limite de uso:** 20 chamadas por minuto e 200 por hora, por pessoa.
 - **Servidor ocupado:** a resposta diz em quantos segundos tentar de novo.
 
 ## Problemas comuns
