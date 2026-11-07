@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.3-3f7d20">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.4-3f7d20">
   <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
 </p>
 
@@ -35,7 +35,6 @@ Os portais te dão filtros. Você tem perguntas: "2 quartos perto do metrô, com
 | ❌ Sem | ✅ Com |
 |---|---|
 | Abrir ZAP, VivaReal, OLX e QuintoAndar um por um | Uma pergunta busca no índice do Ocaum, com anúncios dos 4 |
-| Anúncio que já saiu do ar, descoberto só ao clicar | O Ocaum abre cada link antes de responder e descarta o que sumiu |
 | "Esse preço está bom?" sem referência | 🟢 abaixo · 🟡 dentro · 🔴 acima do mercado, comparado a imóveis parecidos do bairro |
 | Mesmo imóvel repetido em vários portais | Anúncios iguais (mesmo bairro, quartos, área e preço) viram um resultado só, com o link de um deles |
 
