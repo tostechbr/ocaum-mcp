@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4 — 2026-11-07
+- A busca e a avaliação não abrem mais o link do anúncio no portal: leem só o índice do Ocaum, atualizado todo dia (antes conferiam o link e tiravam da lista o que tinha saído do ar). Um anúncio pode ter saído do ar desde a última coleta: confira no link original.
+- A busca fica mais rápida: a conferência de links era cerca de dois terços do tempo dela.
+- `ocaum_index_status`: o alvo de atualização da base é 30 h.
+
 ## 0.2.3 — 2026-11-07
 - Texto alinhado com o que o Ocaum faz: a busca é no índice do Ocaum (anúncios de ZAP, VivaReal, OLX e QuintoAndar, atualizado todo dia), não ao vivo nos portais.
 - Limite de uso: 20 chamadas por minuto e 200 por hora, por pessoa (era 40 e 400).
