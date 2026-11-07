@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-servidor_remoto-1d1d1f">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.4-3f7d20">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.5-3f7d20">
   <img alt="Base" src="https://img.shields.io/badge/base-atualizada_todo_dia-3f7d20">
 </p>
 
