@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.5 — 2026-11-07
+- Pacote do plugin no ChatGPT: a descrição, as orientações da skill e as notas da versão dizem que a busca é no índice do Ocaum, atualizado todo dia, e que um anúncio pode ter saído do ar desde a última coleta. Limites de uso: 20 por minuto e 200 por hora.
+- Junta as mudanças da versão 0.2.3 do rascunho do portal da OpenAI: autor do plugin, categoria Other e disponibilidade em todos os países.
+
 ## 0.2.4 — 2026-11-07
 - A busca e a avaliação não abrem mais o link do anúncio no portal: leem só o índice do Ocaum, atualizado todo dia (antes conferiam o link e tiravam da lista o que tinha saído do ar). Um anúncio pode ter saído do ar desde a última coleta: confira no link original.
 - A busca fica mais rápida: a conferência de links era cerca de dois terços do tempo dela.
