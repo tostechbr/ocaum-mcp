@@ -203,6 +203,8 @@ O Ocaum registra as buscas. Saiba como esses dados são tratados na [Política d
 
 ## Responsáveis
 
+O Ocaum é operado pela DIMAR DESENVOLVIMENTO DE SOFTWARE LTDA, CNPJ 61.914.373/0001-62.
+
 **Tiago Oliveira** ([@tostechbr](https://github.com/tostechbr) · [LinkedIn](https://www.linkedin.com/in/tiagolivesan/)), engenheiro de AI/ML
 
 **Bruno Oliveira** ([@brudevel](https://github.com/brudevel) · [LinkedIn](https://www.linkedin.com/in/brunoliveirasantos/)), Produto, AI
